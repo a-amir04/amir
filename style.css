@@ -4,70 +4,73 @@
     box-sizing: border-box;
 }
 
-a{
-    color: white;
-    text-decoration: none;
-}
-
-.header{
-    display: flex;
-    justify-content: space-between;
-    padding: 10px;
-    background-color: #1b242f;
-}
-
-.header__section{
-    display: flex;
-    align-items: center;
-}
-
-.header__item{
-    padding: 10px 80px;
-    font-size: 25px;
-    margin-left: 40px;
-}
-
-.header__link:hover{
-    color: #e31b6d;
-    font-weight: 400;
-}
-
 body{
     margin: 0;
     font-family: "Raleway";
 }
 
+a{
+    color: white;
+    text-decoration: none;
+}
+
 .intro{
-    min-height: 100vh;
+    max-width: 100vw;
     max-height: 100vh;
+    position: relative;
     overflow: hidden;
 }
 
-.intro__content{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+.intro::before{
+    content: "";
     width: 100%;
     height: 100%;
+    background: rgba(0, 0, 0, 0.1);
     position: absolute;
     top: 0;
     left: 0;
     z-index: 2;
 }
 
-.intro__title{
-    margin: 0;
-    font-size: 55px;
+.intro__video{
+    padding-bottom: 56.25%;
+} 
+
+video{
+    width: auto;
+    height: auto;
+    top: 0;
+    left: 0;
+}
+
+.intro__content{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     color: white;
+    z-index: 3;
+}
+
+.intro__content h1{
+    font-size: 4.5vw;
+    margin: 0 0 15px;
+    font-weight: 400;
     text-align: center;
 }
 
-.title__name{
+.name{
     color: #e31b6d;
 }
 
-.intro__p{
-    margin: 5px;
+.intro__content p{
+    text-align: center;
+    font-size: 2.5vw;
 }
 
 .intro__button{
@@ -75,37 +78,43 @@ body{
     text-decoration: none;
     border: 2px solid white;
     padding: 8px 25px;
-    font-size: 28px;
     transition: color 0.3s;
 }
 
 .intro__button:hover{
-    background-color: #04c2c9;
+    color: #04c2c9;
     border-color: #04c2c9;
 }
 
-.container1{
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-}
+.header{
+    max-width: 100vw;
+    min-height: 2vh;
+    display: flex;
+    flex-direction: row;
+    padding: 3px;
+    background-color: #1b242f;
+    font-size: 2vw;
 
-.video{
-    min-height: 100vh;
-    position: relative;
-    z-index: 1;
-    padding-bottom: 56.25%;
-}
-
-.video__media{
-    width: 100%;
-    height: auto;
-    position: absolute;
+    position: sticky;
     top: 0;
-    left: 0;
+    z-index: 1;
 }
 
-img{
+.header__items{
+    display: flex;
+    align-items: center;
+}
+
+.header__item{
+    padding: 10px 4vw;
+    margin-left: 2vw;
+}
+
+.header__item:hover{
+    color: #e31b6d;
+} 
+
+.hero img{
     width: 100%;
     height: 100%;
 }
@@ -113,6 +122,7 @@ img{
 .hero__title,
 .hero__subtitle{
     margin: 0;
+    color: #444649;
 }
 
 .hero{
@@ -120,6 +130,7 @@ img{
     display: flex;
     justify-content: center;
     align-items: center;
+    color: #444649;
 }
 
 .container{
@@ -157,9 +168,11 @@ img{
 }
 
 .hero__link{
+    pointer-events: none;
+    cursor: default;
     margin-right: 10px;
-    font-size: 30px;
-    color: black;
+    font-size: 60px;
+    color: #444649
 }
 
 .hero__link:hover{
@@ -198,7 +211,7 @@ img{
         font-weight: 400;
     }
     .hero__description{
-        font-size: 14px;
+        font-size: 4vw;
     }
     .hero__about{
         text-align: center;
@@ -233,4 +246,167 @@ img{
     to{
         backdrop-filter: hue-rotate(90deg);
     }
+}
+
+.portfolio__container{
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #F5F5F5;
+}
+
+.portfolio{
+    background-color: #F5F5F5;
+    padding-top: 80px;
+    padding-bottom: 115px;
+}
+
+.portfolio__header{
+    margin: 0;
+    margin-bottom: 70px;
+    font-weight: 700;
+    font-size: 46px;
+    line-height: 130%;
+    text-align: center;
+    color: #444649;
+}
+
+.portfolio-cards-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.card{
+    margin-bottom: 30px;
+    padding: 20px;
+    max-width: 540px;
+    background-color: #fff;
+    box-shadow: 0px 10px 40px rgba(126, 155, 189, 0.35);
+
+}
+
+.card:last-child,
+.card:nth-last-child(2){
+    margin-bottom: 0;
+}
+
+.card-img{
+    margin-bottom: 20px;
+    width: 505px;
+    height: 300px;
+}
+
+.card-title{
+    margin: 0;
+    margin-bottom: 13px;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 130%;
+    color: #1b242f; 
+}
+
+.card p{
+    font-size: 16px;
+    line-height: 130%;
+    margin: 0;
+    color: #616161;
+}
+
+.footer{
+    background-color: #1b242f;
+    padding-top: 45px;
+    padding-bottom: 130px;
+    color: white;
+}
+
+.footer__container{
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.footer__row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.footer__copyright{
+    max-width: 350px;
+    flex-grow: 1;
+    color: #e31b6d;
+    line-height: 1.3;
+}
+
+.footer__copyright-name{
+    font-weight: 700;
+    font-size: 28px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+
+.footer__copyright p{
+    margin: 0;
+    margin-bottom: 15px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.footer__icons{
+    max-width: 350px;
+    flex-grow: 1;
+}
+
+.footer__icons p{
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.3;
+}
+
+.footer__icons-row{
+    display: flex;
+    align-items: center;
+}
+
+.footer__icons-row > * + *{
+    margin-left: 30px;
+}
+
+.footer__icons-row a i{
+    font-size: 22px;
+}
+
+.social-link:hover{
+    color: #4facfe;
+}
+
+.footer__contacts{
+    max-width: 350px;
+    flex-grow: 1;
+}
+
+.footer__button{
+    display: inline-block;
+    height: 50px;
+    padding-left: 30px;
+    padding-right: 30px;
+    border: 3px solid white;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 44px;
+
+}
+
+.footer__button:hover{
+    color:#04c2c9;
+    border-color: #04c2c9;
+}
+
+.footer__contacts p{
+    margin: 15px 0;
+    font-style: 16px;
+    line-height: 1.3;
+    color:#e31b6d
 }

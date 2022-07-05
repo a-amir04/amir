@@ -13,29 +13,24 @@
 </head>
 <body>
     <div class="intro" id="home">
-        <div class="video">
-            <video class="video__media" src="img/background2.mp4" autoplay muted loop></video>
+        <div class="intro__video">
+            <video src="img/background2.mp4" autoplay loop muted></video>
         </div>
         <div class="intro__content">
-            <div class="container1">
-                <h1 class="intro__title">Hello, I'm <span class="title__name">Amir Abdukulov</span>.
-                    <br>I'm a web developer.
-                    <p class="intro__p"><a href="#About" class="intro__button">My profile</a></p>
-                </h1>
-            </div>
+            <h1 class>Hi, I'm <span class="name">Amir Abdukulov</span>.
+                <br>I'm a web developer.
+            </h1>
+            <p><a href="#about" class="intro__button">My profile</a></p>
         </div>
     </div>
-    <header class="header" id="About">
-        <div class="header__section">
-            <div class="header__item"><a class="header__link" href="#home" >
-                Home  
-            </a></div>
-            <div class="header__item"><a class="header__link" href="#About" >
-                About   
-            </a></div>
-            <div class="header__item"><a class="header__link" href="#">
-                Contact   
-            </a></div>
+    <nav id="about"></nav>
+    <header class="header">
+        <div class="header__items">
+            <a href="#home" class="header__item">Home</a>
+            <a href="#about" class="header__item">About</a>
+            <a href="#portfolio" class="header__item">Portfolio</a>
+            <a href="#contact" class="header__item">Contact</a>
+
         </div>
     </header>
     <main class="hero">
@@ -48,21 +43,92 @@
                     Amir Abdukulov
                 </h2>
                 <p class="hero__description">
-                    Привет, я занимаюсь вёрсткой адаптивных сайтов по макету. 
+                    Привет, я cтудент первого курса факультета ИТ в МТУСИ.
+                    <br>В свободное время занимаюсь вёрсткой адаптивных сайтов по макету.
                     <br>Пишите для сотрудничества.
+                    <br>
+                    <br>Стак технологий, которые использую:
                 </p>
                 <div class="hero__links">
-                    <a class="hero__link" href=""><i class='bx bxl-vk'></i></a>
-                    <a class="hero__link" href=""><i class='bx bxl-instagram'></i></a>
-                    <a class="hero__link" href=""><i class='bx bxl-linkedin'></i></a>
-                    <a class="hero__link" href=""><i class='bx bxl-github'></i></a>
+                    <a class="hero__link" href="#"><i class='bx bxl-html5'></i></a>
+                    <a class="hero__link" href="#"><i class='bx bxl-css3'></i></a>
+                    <a class="hero__link" href="#"><i class='bx bxl-javascript'></i></a>
+                    <a class="hero__link" href="#"><i class='bx bxl-python'></i></a>
                 </div>
             </div>
             <div class="hero__box">
-                <img class="hero__box-img" src="img/11.png" alt="man">
+                <img class="hero__box-img" src="img/111.png" alt="man">
             </div>
         </div>
     </main>
+    <div class="portfolio" id="portfolio">
+        <div class="portfolio__container">
+            <h2 class="portfolio__header">Portfolio</h2> 
+            <div class="portfolio-cards-wrapper">
+                <div class="card">
+                    <img class="card-img" src="img/1.jpg" alt="site">
+                    <h3 class="card-title">Многостраничный сайт</h3>
+                    <p class="">Верстка многостраничного сайта</p>
+                </div>
+    
+                <div class="card">
+                    <img class="card-img" src="img/2.jpg" alt="site">
+                    <h3 class="card-title">Адаптивный лендинг</h3>
+                    <p class="">Верстка многостраничного сайта</p>
+                
+                </div>
+                
+                <div class="card">
+                    <img class="card-img" src="img/3.png" alt="site">
+                    <h3 class="card-title">Личный сайт</h3>
+                    <p class="">Верстка многостраничного сайта</p>
+                </div>
+                
+                <div class="card">
+                    <img class="card-img" src="img/4.jpg" alt="site">
+                    <h3 class="card-title">Интернет магазин</h3>
+                    <p class="">Верстка многостраничного сайта</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer" id="contact">
+        <div class="footer__container">
+            <div class="footer__row">
+                <div class="footer__copyright">
+                    <div class="footer__copyright-name">&copy;Amir Abdukulov</div>
+                    <p>HTML верстка и разработка сайтов</p>
+                </div>
+                <div class="footer__icons">
+                    <p>My profiles in social media:</p>
+                    <div class="footer__icons-row">
+                        <a href="https://instagram.com/a.amir04" class="social-link" target="_blank">
+                            <i class='bx bxl-instagram'></i>
+                        </a>
+                        <a href="#" class="social-link" target="_blank">
+                            <i class='bx bxl-facebook'></i>
+                        </a>
+                        <a href="https://vk.com/a.abdukulov" class="social-link" target="_blank">
+                            <i class='bx bxl-vk'></i>
+                        </a>
+                        <a href="https://vk.com/away.php?utf=1&to=https%3A%2F%2Fwww.linkedin.com%2Fin%2Famir-abdukulov-00435522b" class="social-link">
+                            <i class='bx bxl-linkedin'></i>
+                        </a>
+                        <a href="https://github.com/a-amir04/amir.git" class="social-link" target="_blank">
+                            <i class='bx bxl-github'></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer__contacts">
+                    <a href="mailto:abdukulovamir2402@gmail.com" class="footer__button">
+                        Mail me
+                    </a>
+                    <p>Leave me a message to order or to know about the price of your project</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="main.js"></script>
 </body>
 </html>
 
